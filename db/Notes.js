@@ -24,16 +24,18 @@ class Notes {
             return notes;
         })
     }
-    // writeNote(note) {
-    //     //create an object for the note and assign and id.
-    //     return this.write().then(rawNotes => {
-
-    //     })
-    // }
-    // deleteNote(id) {
-    //     //use filter method
-    //     return ... 
-    // }
+    writeNote(note) {
+        //create an object for the note and assign and id.
+        const newNote = {
+            title: note.title,
+            text: note.text,
+            id: uuidv4()
+        }
+        return this.getNotes().then(notesArr => [...notesArr, newNote]).then(updatedNotesArr => this.write(updatedNotesArr)).then(() => newNote);
+    }
+    deleteNote(id) {
+        return this.getNotes().then(oldNotes => oldNotes.filter((note) => note.id !== id)).then(updatedNotesArr => this.write(updatedNotesArr));
+    }
 }
 
-module.exports = Notes;
+module.exports = new Notes();
