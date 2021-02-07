@@ -1,13 +1,15 @@
 // Dependencies
 // =============================================================
 const express = require("express");
-// const apiRoutes = require("./routes/api");
+const path = require("path");
 const viewRoutes = require("./routes/view");
+const apiRoutes = require("./routes/api");
+const fs = require("fs");
 
 // Sets up the Express App
 // =============================================================
-var app = express();
-var PORT = 8080;
+const app = express();
+const PORT = 8080;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -15,6 +17,7 @@ app.use(express.json());
 app.use(express.static("public"));
 // app.use("/api", apiRoutes);
 app.use("/", viewRoutes);
+app.use("/api", apiRoutes);
 
 // Starts the server to begin listening
 // =============================================================

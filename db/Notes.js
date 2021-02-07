@@ -22,17 +22,18 @@ class Notes {
                 notes = [];
             }
             return notes;
-
         })
     }
-    writeNote(note) {
-        //create an object for the note and assign and id.
-        return ...
-    }
-    deleteNote(id) {
-        //use filter method
-        return ... 
-    }
+    // writeNote(note) {
+    //     //create an object for the note and assign and id.
+    //     return this.write().then(rawNotes => {
+
+    //     })
+    // }
+    // deleteNote(id) {
+    //     //use filter method
+    //     return ... 
+    // }
 }
 
 module.exports = Notes;
