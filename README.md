@@ -17,7 +17,7 @@ The user can view the API routes using "/api/notes", and can add a parameter for
 ## Links
 Questions? My email: matthewguillen777@gmail.com </br>
 Link to repository: https://github.com/GuilleMGN/TemplateEngine </br>
-Link to deployed application: https://limitless-cove-32044.herokuapp.com/
+Link to deployed application: <a href="https://limitless-cove-32044.herokuapp.com/" target="_blank" rel="noopener noreferrer">Note Taker</a>
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
