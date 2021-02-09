@@ -6,7 +6,7 @@ router.get("/notes", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/notes.html"));
 });
 // Directs to home page
-router.get("*", function(req, res) {
+router.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 

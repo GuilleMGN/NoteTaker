@@ -17,6 +17,10 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use("/", viewRoutes);
 app.use("/api", apiRoutes);
+// Defaults to homepage if route unknown
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "public/index.html"));
+});
 
 // Starts the server to begin listening
 // =============================================================
